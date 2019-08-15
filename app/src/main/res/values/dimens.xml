@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name = "size_margin">15dp</dimen>
+
+    <dimen name = "padding_editText">10dp</dimen>
+    <dimen name = "size_editText">35dp</dimen>
+    <dimen name = "size_searchBut">35dp</dimen>
+</resources>
