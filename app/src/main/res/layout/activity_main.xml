@@ -2,61 +2,100 @@
 <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android = "http://schemas.android.com/apk/res/android"
         xmlns:app = "http://schemas.android.com/apk/res-auto"
+        xmlns:tools = "http://schemas.android.com/tools"
         android:layout_width = "match_parent"
-        android:layout_height = "match_parent">
+        android:layout_height = "match_parent"
+        android:background = "@color/orange">
 
-    <LinearLayout
-            android:background = "@color/orangeBackground"
+    <com.google.android.material.tabs.TabLayout
+            android:id = "@+id/tabLayout_main"
             android:layout_width = "0dp"
             android:layout_height = "wrap_content"
-            app:layout_constraintTop_toTopOf = "parent"
             app:layout_constraintStart_toStartOf = "parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:orientation = "vertical" android:id = "@+id/linearLayout_main">
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent">
+    </com.google.android.material.tabs.TabLayout>
 
-        <com.google.android.material.tabs.TabLayout
-                android:id = "@+id/tabLayout_main"
-                android:layout_margin="@dimen/size_margin"
-                android:layout_width = "match_parent"
-                android:layout_height = "wrap_content">
-        </com.google.android.material.tabs.TabLayout>
-
-        <HorizontalScrollView
-                android:layout_width = "match_parent"
-                android:layout_height = "wrap_content"
-                android:id = "@+id/horizontalScrollView_main">
-
-        </HorizontalScrollView>
+    <HorizontalScrollView
+            android:id = "@+id/horizontalScrollView_main"
+            android:layout_width = "0dp"
+            android:layout_height = "@dimen/size_horizontalScrollview_main"
+            app:layout_constraintTop_toBottomOf = "@+id/tabLayout_main"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent">
         <LinearLayout
-                android:background = "@color/white"
-                android:orientation = "horizontal"
-                android:layout_width = "match_parent"
-                android:layout_height = "wrap_content"
-                android:layout_margin = "@dimen/size_margin">
-            <EditText
-                    android:lines = "1"
-                    android:padding="@dimen/padding_editText"
-                    android:background = "@null"
-                    android:layout_width = "0dp"
-                    android:layout_weight = "9"
-                    android:layout_height = "@dimen/size_editText"/>
-            <ImageView
-                    android:background="@drawable/ic_search"
-                    android:layout_width = "0dp"
-                    android:layout_weight = "1"
-                    android:layout_height = "@dimen/size_searchBut"/>
+                android:layout_width = "0dp"
+                android:layout_height = "match_parent"
+                android:orientation = "horizontal">
+            <TextView
+                    android:gravity = "center"
+                    android:layout_gravity = "center_vertical"
+                    android:padding = "@dimen/padding_textView"
+                    android:layout_marginStart = "@dimen/margin_textView"
+                    android:layout_marginEnd = "@dimen/margin_textView"
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:text = "옷 종류"
+                    android:textStyle = "bold"
+                    android:textColor = "@color/brown"
+                    android:background = "@drawable/search_round_border_edittext"/>
         </LinearLayout>
-    </LinearLayout>
+    </HorizontalScrollView>
+
+    <View
+            android:id = "@+id/view_main_whiteBackground"
+            android:layout_width = "match_parent"
+            android:layout_height = "@dimen/size_backgroundView"
+            android:layout_margin = "@dimen/size_margin"
+            android:background = "@drawable/search_round_border_edittext"
+            app:layout_constraintTop_toBottomOf = "@+id/horizontalScrollView_main"
+            app:layout_constraintBottom_toTopOf = "@id/recyclerView_main"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"/>
+
+    <EditText
+            android:layout_width = "0dp"
+            android:layout_height = "@dimen/size_editText"
+            android:padding = "@dimen/padding_editText"
+            android:layout_marginStart = "@dimen/margin_editText"
+            android:background = "@null"
+            android:lines = "1"
+            android:maxLength = "20"
+            app:layout_constraintStart_toStartOf = "@+id/view_main_whiteBackground"
+            app:layout_constraintEnd_toStartOf = "@+id/searchButton_main"
+            app:layout_constraintTop_toTopOf = "@+id/view_main_whiteBackground"
+            app:layout_constraintBottom_toBottomOf = "@+id/view_main_whiteBackground"/>
+
+    <ImageView
+            android:id = "@+id/searchButton_main"
+            android:background = "@drawable/ic_search"
+            android:layout_width = "@dimen/size_searchBut"
+            android:layout_height = "@dimen/size_searchBut"
+            android:layout_marginEnd = "@dimen/margin_searchBut"
+            app:layout_constraintEnd_toEndOf = "@+id/view_main_whiteBackground"
+            app:layout_constraintTop_toTopOf = "@+id/view_main_whiteBackground"
+            app:layout_constraintBottom_toBottomOf = "@+id/view_main_whiteBackground"/>
 
     <androidx.recyclerview.widget.RecyclerView
+            android:id = "@+id/recyclerView_main"
             android:layout_width = "0dp"
             android:layout_height = "0dp"
-            app:layout_constraintTop_toBottomOf = "@+id/linearLayout_main"
+            android:background = "@color/white"
+            app:layout_constraintTop_toBottomOf = "@id/view_main_whiteBackground"
+            app:layout_constraintEnd_toEndOf = "parent"
             app:layout_constraintStart_toStartOf = "parent"
-            app:layout_constraintBottom_toBottomOf = "parent"
-            app:layout_constraintEnd_toEndOf = "parent" android:id = "@+id/recyclerView">
-
+            app:layout_constraintBottom_toBottomOf = "parent">
     </androidx.recyclerview.widget.RecyclerView>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id = "@+id/add_shopItem_fab"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginEnd = "8dp"
+            android:layout_marginBottom = "8dp"
+            app:backgroundTint = "@color/orange"
+            android:src = "@drawable/ic_add"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintBottom_toBottomOf = "parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

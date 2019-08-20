@@ -1,8 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name = "size_margin">15dp</dimen>
+    //전체 마진 사이즈
+    <dimen name = "size_margin">10dp</dimen>
 
+
+    //Main 카테고리 layout 크기
+    <dimen name = "size_horizontalScrollview_main">50dp</dimen>
+    //Main 카테고리 textview 패딩
+    <dimen name = "padding_textView">5dp</dimen>
+    //Main 카테고리 textview 마진
+    <dimen name = "margin_textView">5dp</dimen>
+
+    //Main 검색 editText, shopping item layout 둥글게
+    <dimen name = "radius_round_border">20dp</dimen>
+    //Main 검색 뒷 배경
+    <dimen name = "size_backgroundView">40dp</dimen>
+    //Main 검색 editText 패딩
     <dimen name = "padding_editText">10dp</dimen>
-    <dimen name = "size_editText">35dp</dimen>
+    //Main 검색 editText 오른쪽 마진
+    <dimen name = "margin_editText">10dp</dimen>
+    //Main 검색 editText 높이
+    <dimen name = "size_editText">45dp</dimen>
+    //Main 검색 버튼 크기
     <dimen name = "size_searchBut">35dp</dimen>
+    //Main 검색 버튼 오른쪽 마진
+    <dimen name = "margin_searchBut">10dp</dimen>
+
+    //shopping item iamge 둥굴게
+    <dimen name = "radius_round_border_image">40dp</dimen>
+    //Main shopping item 마진
+    <dimen name = "margin_shopItem_layout">10dp</dimen>
+    //Main shopping item 패딩
+    <dimen name = "padding_shopItem_layout">10dp</dimen>
+    //Main shopping Item 이미지 크기
+    <dimen name = "size_shopItem_image">170dp</dimen>
+    //Main shopping item 날짜 textView 크기
+    <dimen name = "size_shopItem_date_textView">16dp</dimen>
+    //Main shopping item 이름 textView 크기
+    <dimen name = "size_shopItem_name_textView">24dp</dimen>
+    //Main shopping item 품명 textView 크기
+    <dimen name = "size_shopItem_code_textView">20dp</dimen>
+    //Main shopping item 가격 textView 크기
+    <dimen name = "size_shopItem_price_textView">24dp</dimen>
+    
 </resources>

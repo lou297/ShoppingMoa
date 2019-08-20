@@ -4,6 +4,10 @@
     <color name = "colorPrimaryDark">#00574B</color>
     <color name = "colorAccent">#D81B60</color>
 
-    <color name = "orangeBackground">#ccf89b31</color>
+    <color name = "deepOrange">#f89b31</color>
+    <color name = "orange">#ccf89b31</color>
+    <color name = "brown">#784747</color>
+    <color name = "gray">#a4a4a4</color>
     <color name = "white">#FFFFFF</color>
+    <color name = "black">#000000</color>
 </resources>
